@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numbo-Maze</title>
+    <style>
+        body {
+            background-color: rgb(211, 211, 211);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        h2 {
+            text-align: left;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        h3 {
+            text-align: left;
+            font-family: sans-serif;
+            top: 18px;
+            z-index: 0;
+            left: 875px;
+            font-size: 20px;
+        }
+        
+       .ch-1 {
+    		width: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        table {
+            width: 300px;
+            height: 300px;
+        }
+
+        th, td {
+            border: 1px solid black;
+        }
+
+        h4 {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 100px;
+        }
+
+        button {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    <img src="welcometo.png"
+         alt="WELCOME TO NUMBO-MAZE" width="600">
+</h1>
+
+<div class="container">
+    <div>
+        <h2>SELECT DIFFICULTY:</h2>
+        <table>
+            <tr>
+                <td>
+                    <label><input type="radio" name="level" value="Easy">
+                        <img src="EASY.png"
+                             alt="Easy" width="150">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input type="radio" name="level" value="Medium">
+                        <img src="MEDIUM.png"
+                             alt="Medium" width="150">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input type="radio" name="level" value="Hard">
+                        <img src="HARD.png"
+                             alt="Hard" width="150">
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>CHOOSE YOUR CHARACTER:</h3>
+        <table>
+            <tr>
+                <td>
+                    <label><input type="radio" name="character" value="heart">
+                        <img src="ch1.png"
+                             alt="Character 1" width="70">
+                    </label>
+                </td>
+                <td>
+                    <label><input type="radio" name="character" value="bunny">
+                        <img src="ch2.png"
+                             alt="Character 2" width="70">
+                    </label>
+                </td>
+                <td>
+                    <label><input type="radio" name="character" value="mushroom">
+                        <img src="ch3.png"
+                             alt="Character 3" width="70">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input type="radio" name="character" value="moon">
+                        <img src="ch4.png"
+                             alt="Character 4" width="70">
+                    </label>
+                </td>
+                <td>
+                    <label><input type="radio" name="character" value="bird">
+                        <img src="ch5.png"
+                             alt="Character 5" width="70">
+                    </label>
+                </td>
+                <td>
+                    <label><input type="radio" name="character" value="star">
+                        <img src="ch6.png"
+                             alt="Character 6" width="70">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input type="radio" name="character" value="crab">
+                        <img src="ch7.png"
+                             alt="Character 7" width="70">
+                </td>
+                <td>
+                    <label><input type="radio" name="character" value="strawberry">
+                        <img src="ch8.png"
+                             alt="Character 8" width="70">
+                </td>
+                <td>
+                    <label><input type="radio" name="character" value="ghost">
+                        <img src="ch9.png"
+                             alt="Character 9" width="70">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<h4><button>START GAME</button></h4>
+<br><br><br>
+</body>
+</html>
