@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(211, 211, 211);
+}
+
+h1, h2, h3, h4 {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: left;
+    font-size: 20px;
+}
+
+h3 {
+    top: 18px;
+    z-index: 0;
+    left: 875px;
+}
+
+.ch-1 {
+    width: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+table {
+    width: 350px;
+    height: 350px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+h4 {
+    text-align: center;
+    font-size: 100px;
+}
+
+button {
+    font-size: 50px;
+}
