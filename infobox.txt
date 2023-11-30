@@ -1,0 +1,34 @@
+Numbo-Maze is a math-based maze game crafted to transform the learning of math into an enjoyable adventure. Here's a step-by-step guide on how to navigate through your mathematical journey:
+
+
+Instructions:
+1. Select Difficulty:
+Choose your preferred difficulty level: Easy or Hard.
+
+
+2. Choose Your Character:
+Pick your favorite character for a personalized gaming experience.
+
+
+3. Start the Game:
+Use the arrow keys on your keyboard to navigate through the maze.
+
+
+4. Meet Einsteins:
+Along the way, you'll encounter Einsteins, represented as a tiny man with white hair. These are math problem obstacles.
+
+
+5. Answer Math Questions:
+For each Einstein encounter, a math question will appear. Answer it correctly to progress through the maze.
+
+
+6. If You Get It Wrong:
+In the Easy Maze, you have a limit of 5 wrong attempts, while in the Hard Maze, you get 3. Upon making an error, both mazes show the correct answer and provide a solution example. However, in the Hard Maze, you must answer a similar question to proceed, unlike the Easy Maze where it's not required.
+
+
+7. Options After Mistakes:
+If you exceed the allowed wrong attempts, choose to restart the maze or return to the home screen.
+
+
+8. Have Fun and Learn:
+Enjoy the maze, have fun with the math challenges, and improve your skills along the way!
