@@ -2,22 +2,24 @@
 <html>
 <head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="maze.css">
    		 <title>Numbo-Maze</title>
 </head>
 <body>
 <h1>
     <img src="welcometo.png"
-         alt="WELCOME TO NUMBO-MAZE" width="600">
+         alt="WELCOME TO NUMBO-MAZE" width="1000">
 </h1>
 
+<img src="infobox.png" alt="Game Info" width="50">
+
 <div class="container">
-    <div>
-        <h2>SELECT DIFFICULTY:</h2>
+  <div class="button-container">
+  	 <h2>SELECT DIFFICULTY:</h2>
         <table>
             <tr>
                 <td>
-                    <label><input type="radio" name="level" value="Easy">
+                    <label class = "radio-label"><input type="radio" name="level" value="Easy">
                         <img src="EASY.png"
                              alt="Easy" width="250">
                     </label>
@@ -25,7 +27,7 @@
             </tr>
             <tr>
                 <td>
-                    <label><input type="radio" name="level" value="Hard">
+                    <label class = "radio-label"><input type="radio" name="level" value="Hard">
                         <img src="HARD.png"
                              alt="Hard" width="250">
                     </label>
@@ -34,24 +36,24 @@
         </table>
     </div>
 
-    <div>
-        <h3>CHOOSE YOUR CHARACTER:</h3>
+    <div class="button-container">
+        <h3>CHOOSE CHARACTER:</h3>
         <table>
             <tr>
                 <td>
-                    <label><input type="radio" name="character" value="heart">
+                    <label class = "radio-label"><input type="radio" name="character" value="heart">
                         <img src="ch1.png"
                              alt="Character 1" width="70">
                     </label>
                 </td>
                 <td>
-                    <label><input type="radio" name="character" value="bunny">
+                    <label class = "radio-label"><input type="radio" name="character" value="bunny">
                         <img src="ch2.png"
                              alt="Character 2" width="70">
                     </label>
                 </td>
                 <td>
-                    <label><input type="radio" name="character" value="mushroom">
+                    <label class = "radio-label"><input type="radio" name="character" value="mushroom">
                         <img src="ch3.png"
                              alt="Character 3" width="70">
                     </label>
@@ -59,19 +61,19 @@
             </tr>
             <tr>
                 <td>
-                    <label><input type="radio" name="character" value="moon">
+                    <label class = "radio-label"><input type="radio" name="character" value="moon">
                         <img src="ch4.png"
                              alt="Character 4" width="70">
                     </label>
                 </td>
                 <td>
-                    <label><input type="radio" name="character" value="bird">
+                    <label class = "radio-label"><input type="radio" name="character" value="bird">
                         <img src="ch5.png"
                              alt="Character 5" width="70">
                     </label>
                 </td>
                 <td>
-                    <label><input type="radio" name="character" value="star">
+                    <label class = "radio-label"><input type="radio" name="character" value="star">
                         <img src="ch6.png"
                              alt="Character 6" width="70">
                     </label>
@@ -79,17 +81,17 @@
             </tr>
             <tr>
                 <td>
-                    <label><input type="radio" name="character" value="crab">
+                    <label class = "radio-label"><input type="radio" name="character" value="crab">
                         <img src="ch7.png"
                              alt="Character 7" width="70">
                 </td>
                 <td>
-                    <label><input type="radio" name="character" value="strawberry">
+                    <label class = "radio-label"><input type="radio" name="character" value="strawberry">
                         <img src="ch8.png"
                              alt="Character 8" width="70">
                 </td>
                 <td>
-                    <label><input type="radio" name="character" value="ghost">
+                    <label class = "radio-label"><input type="radio" name="character" value="ghost">
                         <img src="ch9.png"
                              alt="Character 9" width="70">
                 </td>
@@ -97,8 +99,9 @@
         </table>
     </div>
 </div>
-
-<h4><button>START GAME</button></h4>
+<div class="button-container">
+	<h4><button>START GAME</button></h4>
+</div>
 <br><br><br>
 </body>
 </html>
