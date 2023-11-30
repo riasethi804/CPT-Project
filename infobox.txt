@@ -14,12 +14,11 @@ Pick your favorite character for a personalized gaming experience.
 Use the arrow keys on your keyboard to navigate through the maze.
 
 
-4. Meet Einsteins:
-Along the way, you'll encounter Einsteins, represented as a tiny man with white hair. These are math problem obstacles.
+Meet Math Brains:
+Along your way, you will encounter Math Brains represented as tiny pixelated brains. They'll challenge you with mathematical problems, testing your mathematical skills.
 
-
-5. Answer Math Questions:
-For each Einstein encounter, a math question will appear. Answer it correctly to progress through the maze.
+Answer Math Questions:
+For each Math Brain encounter, a math question will appear. Answer it correctly to progress through the maze.
 
 
 6. If You Get It Wrong:
