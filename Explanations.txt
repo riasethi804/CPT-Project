@@ -1,0 +1,188 @@
+﻿Addition Using the Associative and Commutative Properties:
+We can employ mathematical properties to simplify the addition of numbers. Let's break down the problem 45 + 50 step by step:
+
+
+1. Associative Property:
+45 + 50 = 40 + 5 + 50
+
+
+2. Commutative Property:
+Group the tens together to make the addition process easier:
+( 40 + 50 ) + 5
+
+
+3. Combine the Tens:
+90+5
+
+
+4. Complete the Addition and Add 5:
+95
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Subtraction using the Distributive and Commutative Properties
+We can employ mathematical properties to simplify the addition of numbers. Let's break down the problem 84 - 37 step by step:
+
+
+1. Distributive Property:
+84 − 37 = ( 80 + 4 ) − 37
+
+
+2. Commutative Property:
+= 80 + ( 4 − 37 )
+
+
+3. Subtraction:=30
+= 80 +( 4 − 30 − 7 )
+
+
+4. Commutative Property:
+= ( 80 − 30 ) + 4 - 7
+
+
+5. Combine Like Terms:
+           = 50 + 4 - 7
+
+
+6. Complete the Subtraction 
+= 47
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multiplication of single-digit numbers
+We can employ mathematical properties to simplify the multiplication of single-digit numbers. Let's break down the problem 8 x 9 step by step. 
+
+
+1. Draw 8 circles. In each circle, write the number 9.
+  
+
+
+
+2. To find your answer, add up the number of 9’s that you count in every circle. In this case, this would be eight 9’s. 
+9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 =
+
+
+3. Notice how adding two 9's together results in 18. Continue grouping until you reach your final result:
+18 + 18 + 18 + 18 =
+36 + 36  =
+
+
+4. Final result 
+72
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Division with dividends and divisors. 
+We can employ mathematical properties when dividing double-digit numbers by single-digit numbers.  Let's break down the problem 72 ÷ 8 step by step:
+
+
+1. Think of 72 as 8 groups:
+Ask yourself, "How many groups of 8 can I make with 72?" In other words, you're finding out how many times you need to add 8 to itself to reach 72.
+
+
+2. Keep adding 8 until you get 72:
+
+
+8 + 8 = 16 (2 times) 
+16 + 8 = 24 (1 time) 
+24 + 8 = 32 (1 time) 
+32 + 8 = 40 (1 time) 
+40 + 8 = 48 (1 time) 
+48 + 8 = 56 (1 time) 
+56 + 8 = 64 (1 time) 
+64 + 8 = 72 (1 time) 
+
+
+3. Now add the number of times
+2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 =
+
+
+4. The amount of times you got it represents your answer. Therefore, your answer is 
+= 9
