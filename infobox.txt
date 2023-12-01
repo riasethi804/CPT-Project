@@ -11,14 +11,14 @@ Pick your favorite character for a personalized gaming experience.
 
 
 3. Start the Game:
-Use the arrow keys on your keyboard to navigate through the maze.
+Use the arrow keys on your keyboard to navigate your character towards the math brains on your screen.
 
 
 Meet Math Brains:
-Along your way, you will encounter Math Brains represented as tiny pixelated brains. They'll challenge you with mathematical problems, testing your mathematical skills.
+Along your way, you will come across tiny pixelated brains known as Math Brains scattered throughout the screen.
 
 Answer Math Questions:
-For each Math Brain encounter, a math question will appear. Answer it correctly to progress through the maze.
+For each Math Brain encounter, a math question will appear. Answer it correctly to progress through the maze. Math Brains will present you with mathematical problems to assess and enhance your mathematical skills. 
 
 
 6. If You Get It Wrong:
