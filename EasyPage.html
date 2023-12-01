@@ -2,35 +2,51 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Easy Level</title>
-    <style>
-        body {
-            background-color: rgb(210, 210, 255);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="utf-8">
+  <title>Easy Level</title>
+  <style>
+    body {
+      background-color: rgb(210, 210, 255);
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Full viewport height, which is the area of the browser 
+      				 	in which a website is displayed */
+    }
 
-        h1 {
-            text-align: center;
-        }
+    #left-container {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); /* Centers the container vertically */
+    }
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    #right-container {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); 
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    img {
+      display: block; /* Removes bottom space under the image */
+      max-width: 100%;
+      max-height: 100vh;  
+    }
+  </style>
 </head>
 
 <body>
-    <h1>Hello, this is the Easy Level!</h1>
+  <div id="left-container">
+    <h1>Easy Level</h1>
+  </div>
 
-    <img src="EasyMaze.png" alt="Easy Maze" width="700">
-
+  <div id="right-container">
+    <img src="EasyMaze.png" alt="Easy Maze">
+  </div>
 </body>
 
 </html>
