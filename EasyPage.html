@@ -2,53 +2,19 @@
 <html>
 
 <head>
- <script src="script.js" defer></script>
+  <script src="script.js" defer></script>
   <meta charset="utf-8">
   <title>Easy Level</title>
-  <style>
-    body {
-      background-color: rgb(210, 210, 255);
-      margin: 0;
-      padding: 0;
-      height: 100vh; /* Full viewport height (the area of the browser in which 
-      				    a website is displayed */
-    }
-
-    #left-container {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%); /* Centers the container vertically */
-    }
-
-    #right-container {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%); 
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    img {
-      display: block; /* Removes bottom space under the image */
-      max-width: 100%; /* Maximum width of an element */
-      max-height: 100vh;  
-    }
-
-  </style>
+  <link rel="stylesheet" href="maze.css">
 </head>
 
 <body>
-  <div id="left-container">
-    <h1>Easy Level</h1>
-  </div>
+  <h1>Easy Level</h1>
 
   <div id="right-container">
-    <img src="EasyMaze.png" alt="Easy Maze">
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -23,6 +23,7 @@ h3 {
     left: 875px;
 }
 
+
 img[alt="Game Info"] {
     position: absolute;
     top: 120px; 
@@ -76,4 +77,14 @@ button {
   top: 0;
   left: 0;
   transition: top 0.2s, left 0.2s;
+}
+
+.brain {
+  width: 15%;
+  position: absolute;
+}
+
+#character {
+ z-index: 100;
+  width: 15%;
 }
