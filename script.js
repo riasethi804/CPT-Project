@@ -3,6 +3,7 @@ let posY = 0;
 const boardWidth = 5;
 const boardHeight = 5;
 const stepSize = 50;
+const brains = []; // Array to store brain images and positions
 
 // Add event listener for the DOMContentLoaded to initialize page
 document.addEventListener('DOMContentLoaded', function() 
@@ -25,12 +26,12 @@ document.addEventListener('DOMContentLoaded', function()
 });
 
 function clicked()
- {
+{
   let selectedLevel = document.querySelector('input[name="level"]:checked');
   let selectedCharacter = document.querySelector('input[name="character"]:checked');
 
   if (!selectedLevel || !selectedCharacter)
-  // if user does not select a game & a character before starting
+  // if the user does not select a game & a character before starting
   {
     alert("Please select both a difficulty level and a character before starting the game.");
     return;
@@ -41,16 +42,15 @@ function clicked()
 
   window.location.href = `${levelValue}Page.html?character=${encodeURIComponent(characterImageSrc)}`;
   /* JS statement that changes the current page's URL to a new one
-     window.location.href means current URL of browser window 
-     ${levelValue}Page.html - ${levelValue} means variable or value representing the level
-     ?character=${encodeURIComponent(characterImageSrc)} is a query string appeneded to the URL
-      - question mark followed by key value pairs
-  encodeURIComponent(characterImageSrc) encodes special characters in characterImageSrc
+     window.location.href means the current URL of the browser window 
+     ${levelValue}Page.html - ${levelValue} means a variable or value representing the level
+     ?character=${encodeURIComponent(characterImageSrc)} is a query string appended to the URL
+      - question mark followed by key-value pairs
   */
 }
 
 function appendCharacterImage()
- {
+{
   let params = new URLSearchParams(window.location.search); /* extracts the character 
   value from URL */
   let characterImageSrc = params.get('character');
@@ -59,7 +59,7 @@ function appendCharacterImage()
     let characterImage = document.createElement('img');
     characterImage.src = characterImageSrc;
     characterImage.alt = 'Selected Character';
-    characterImage.id = 'character';// This adds an ID to the character image 
+    characterImage.id = 'character'; // This adds an ID to the character image 
     let container = document.getElementById('right-container'); /* used to structure
     content in EasyPage.html and HardPage.html */
     if (container)
@@ -72,7 +72,7 @@ function appendCharacterImage()
   }
 }
 
-function adjustCharacterInitialPosition()  
+function adjustCharacterInitialPosition()
 {
   // Get the character element by its ID
   const character = document.getElementById('character');
@@ -84,24 +84,47 @@ function adjustCharacterInitialPosition()
   }
 }
 
-// Function to scatter brain images randomly across the body of the HTML document
-function scatterBrains(numBrains) 
-{
-  for (let i = 0; i < numBrains; i++)    
-  // Loop to create and position a specified number of brain images
-  {
+function scatterBrains(numBrains) {
+  const brains = [];
+  const brainWidth = 50;  // Adjust to match the width of your brain images
+  const brainHeight = 62; // Adjust to match the height of your brain images
+  const offsetX = 100;    // Minimum distance from the left of the screen
+  const offsetY = 100;    // Minimum distance from the top of the screen
+
+  for (let i = 0; i < numBrains;) {
     const brain = document.createElement('img');
     brain.src = 'brain.png';
     brain.className = 'brain';
-     // CSS class for styling purposes
-    const x = Math.random() * (window.innerWidth - 50);
-    // Generate random x and y coordinates within the window boundaries
-    const y = Math.random() * (window.innerHeight - 50);
+    brain.style.position = 'absolute';
+
+    // Random position within window bounds with an offset
+    const x = Math.random() * (window.innerWidth - brainWidth - offsetX) + offsetX;
+    const y = Math.random() * (window.innerHeight - brainHeight - offsetY) + offsetY;
+
     brain.style.left = `${x}px`;
     brain.style.top = `${y}px`;
-    document.body.appendChild(brain);  // Append the brain image to the body of the HTML document
+
+    // Check if the new brain overlaps with existing brains
+    let overlap = brains.some(otherBrain => {
+      const otherRect = otherBrain.getBoundingClientRect();
+      const newRect = brain.getBoundingClientRect();
+      return !(
+        newRect.right < otherRect.left ||
+        newRect.left > otherRect.right ||
+        newRect.bottom < otherRect.top ||
+        newRect.top > otherRect.bottom
+      );
+    });
+
+    // If no overlap detected, append the brain to the body and save it
+    if (!overlap) {
+      document.body.appendChild(brain);
+      brains.push(brain);
+      i++; // Only increment if the brain has been placed successfully
+    }
   }
 }
+
 
 function moveCharacter(event) 
 {
@@ -127,8 +150,70 @@ function moveCharacter(event)
         break;
     }
 
-// Update the top / left style of character to show the new position:
+    // Update the top / left style of character to show the new position:
     character.style.top = `${posY}px`;
     character.style.left = `${posX}px`;
   }
 }
+// Modifications to script.js
+
+// Helper function to generate a random addition question
+function getRandomAdditionQuestion() {
+  const num1 = Math.floor(Math.random() * 90) + 10;  // Ensure two-digit number
+  const num2 = Math.floor(Math.random() * 90) + 10;  // Ensure two-digit number
+  const correctAnswer = num1 + num2;
+  return {
+    question: `What is ${num1} + ${num2}?`,
+    answer: correctAnswer
+  };
+}
+
+function checkBrainCollision() {
+  const character = document.getElementById('character');
+  const characterRect = character.getBoundingClientRect();
+  const brains = document.querySelectorAll('.brain');
+
+  brains.forEach(brain => {
+    const brainRect = brain.getBoundingClientRect();
+    const brainBottomCenterX = brainRect.left + brainRect.width / 2;
+    const brainBottomCenterY = brainRect.top + (brainRect.height * 3) / 4; // Adjust accordingly
+
+    if (
+      characterRect.left < brainBottomCenterX &&
+      characterRect.right > brainBottomCenterX &&
+      characterRect.top < brainBottomCenterY &&
+      characterRect.bottom > brainBottomCenterY
+    ) {
+      if (!brain.classList.contains('answered')) {
+        // The brain is not marked as answered, so we ask the question
+        const { question, answer } = getRandomAdditionQuestion();
+        const userAnswer = parseInt(prompt(question), 10);
+        if (userAnswer === answer) {
+          alert('Correct!');
+          brain.classList.add('answered'); // Marking the brain as 'answered'
+          brain.remove(); // Removing the brain element from the page
+        } else {
+          alert(`Incorrect. The correct answer is ${answer}.`);
+        }
+      }
+    }
+  });
+}
+
+function getRandomAdditionQuestion() {
+  const num1 = Math.floor(Math.random() * 90) + 10; // Ensure two-digit number
+  const num2 = Math.floor(Math.random() * 90) + 10; // Ensure two-digit number
+  return {
+    question: `What is ${num1} + ${num2}?`,
+    answer: num1 + num2
+  };
+}
+
+document.addEventListener('keydown', (event) => {
+  moveCharacter(event);
+  checkBrainCollision(); // Check collision after each move
+});
+
+
+
+
